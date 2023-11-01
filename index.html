@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<title> NSFASToken ANALYTICS 2023 JAN-OCT</title>
+<body>
+  <h1>NSFASToken ANALYTICS 2023 JAN-OCT</h1>
+  
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    
+
+<script>
+const xValues = ["UJ", "WITS", "UCT", "UL", "UNIVEN"];
+const yValues = [55, 49, 44, 35, 32];
+const barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "NSFAS ICO/ ERC-20 COMPLIANT REPORTS"
+    }
+  }
+});
+</script>
+</body>
+</html>
+
+<body>
+  
+  <h2>NSFAS 2023 FUNDING LIST</h2>
+  
+  <form action=""> 
+    <select name="customers" onchange="showCustomer(this.value)">
+      <option value="">Select student :</option>
+      <option value="ALFKI">Onkgopoditse Chepape</option>
+      <option value="NORTS ">Peter Malapane</option>
+      <option value="WOLZA">Bongiwe Khumalo</option>
+      <option value="WOLZA">TTeboho Lehong</option>
+      <option value="WOLZA">Siyabulelwa Nkayise</option>
+      <option value="WOLZA">Amanda Bross</option>
+      <option value="WOLZA">Cytlin Naidoo</option>
+      <option value="WOLZA">Jaden Botes</option>
+      <option value="WOLZA">Aishah-Bintie-Dawood Damon</option>
+      <option value="WOLZA">Zaakirah Khan</option>
+      <option value="WOLZA">Ziyanda Dlamini</option>
+      <option value="WOLZA">Omolemo Diko</option>
+    </select>
+  </form>
+  <br>
+  <div id="txtHint">Students who recently opened their wallet will be listed.</div>
+  
+  <script>
+  function showCustomer(str) {
+    if (str == "") {
+      document.getElementById("txtHint").innerHTML = "";
+      return;
+    }
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+    xhttp.open("GET", "getcustomer.php?q="+str);
+    xhttp.send();
+  }
+  </script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>NSFASToken Transaction history</h2>
+
+<table>
+  <tr>
+    <th>Names</th>
+    <th>Student number </th>
+    <th>University</th>
+  </tr>
+  <tr>
+    <td>Ongkgopoditse chepape</td>
+    <td>1733384 - first</td>
+    <td>University ofWitwatersrand</td>
+  </tr>
+  <tr>
+    <td>Peter Malapane</td>
+    <td>160677 - fourth</td>
+    <td>Rand Africans Univerity</td>
+  </tr>
+  <tr>
+    <td>Bongiwe Khumalo</td>
+    <td> 2323423 second</td>
+    <td>UCT</td>
+  </tr>
+  <tr>
+    <td>Tebogo Lehong</td>
+    <td>26981 -First</td>
+    <td>UL</td>
+  </tr>
+  <tr>
+    <td>Siyabulela Nkayise</td>
+    <td>1989234 - Fourth</td>
+    <td>UJ</td>
+  </tr>
+  <tr>
+    <td>Amanda Bross</td>
+    <td>21244547 second</td>
+    <td>UNIVEN</td>
+  </tr>
+</table>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<h2>HIGH RISK STUDENTS</h2>
+
+<table>
+  <tr>
+    <th>NAMES</th>
+    <th>AMOUNTS WASTED</th>
+    <th>COINS LEFT</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>24.000</td>
+    <td>50 NSFASToken</td>
+  </tr>
+  <tr>
+    <td>Nkosana Zuma</td>
+    <td>11.000</td>
+    <td>12 NSFASTokens</td>
+  </tr>
+  <tr>
+    <td>Mihlali Khoza</td>
+    <td>12.500</td>
+    <td>8 NSFASTOKEN</td>
+  </tr>
+  <tr>
+    <td>Refiloe Nkadimeng</td>
+    <td>17.340</td>
+    <td>91 NSFASToken</td>
+  </tr>
+  <tr>
+    <td>Marang Leopeng</td>
+    <td>23.000</td>
+    <td>43 NSFASToken</td>
+  </tr>
+  <tr>
+    <td>Ricardo Van schalkwyk</td>
+    <td>1000</td>
+    <td>120 NSFAStoken</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
